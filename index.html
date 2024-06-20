@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light navbar-expand-md bg-navigasi"> <!-- navbar-light membuat humberger icon -->
+    <!-- navbar-expand-md >= 768px, akan expand ketika ukuran browser 768px   -->
+    <!-- <nav class="navbar navbar-expand"> <! navbar-expend membuat menu pada navbar disusun secara horixontal -->
+      <div class="container">
+        <a href="#" class="navbar-brand"> <!-- navbar-brand untuk menambahkan logo -->
+          <img src="gambar/larispos.png" alt="Logo Larispos">
+        </a>
+
+        <!-- navbar-toogler membuat menu navbar bersusun ke bawah seperti (humberger icon), note: harus menggunakan <nav class="navbar"> -->
+        <button type="button"class="navbar-toggler"
+        data-bs-toggle="collapse" data-bs-target="#menu-navigasi">  <!-- data pada data-bs-target harus sama dengan id pada div (ditambahkan #) -->
+        <!-- code diatas membuat ketika kita mengklik humberger icon maka akan keluar menu navigasi -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu-navigasi"> <!-- navbar-collapse membuat menu navbar berpindah ke dalam humberger icon -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#fitur" class="nav-link">Fitur</a>  <!-- karena setiap content pada navbar berbentuk link / mengarah ke halaman lain maka tambahkan <a href="#"></a> -->
+            </li>
+            <li class="nav-item">
+              <a href="#testimoni" class="nav-link">Testimoni</a>
+            </li>
+            <li class="nav-item">
+              <a href="#harga" class="nav-link">Harga</a>
+            </li>
+            <li class="nav-item">
+              <a href="#kontak" class="nav-link">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+    <section id="hero" class="pt-5 bg-hero pb-5"> <!-- pt-5 untuk memberikan padding(jarak) hero/gambar dari navigasi -->
+      <div class="container">
+        <div class="row flex-md-row-reverse"> <!-- membuat text konten di sebelah kiri dan gambar disebelah kanan -->
+          <div class="col-md-6 "> <!--col-6 digunakan karena kita ingin membagi 2 kolom sama besar -->
+            <img src="gambar/2device.png" class="img-fluid">
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0"> <!-- col-6 juga membuat text konten berpindah ke samping gambar -->
+            <h1>Aplikasi Kasir Terbaik</h1>
+            <div class="mt-4 mb-4"> <!-- mt = margin top mb = margin bottom -->
+              Laris Pos adalah sistem kasir/POS untuk tablet dan ponsel. Dikembangkan oleh Solis POS yang sudah dipakai di ribuan outlet seluruh Indonesia, dengan pengalaman lebih dari 15 tahun di bidang F&B dan retail. Laris POS kini hadir untuk memenuhi kebutuhan terkini yang mengutamakan kenyamanan dan kepraktisan menggunakan tablet dan smartphone untuk menjalankan bisnis sehari-hari.
+            </div>
+            <button type="button" class="btn btn-primary me-3"> <!-- me-3 untuk membuat jarak diantara 2 button -->
+              <i class="bi bi-google-play"></i>
+              Unduh di Google Play
+            </button>
+            <button type="button" class="btn btn-outline-danger">
+              <i class="bi bi-apple"></i>
+              Unduh di App Store
+            </button>
+          </div>
+        </div>
+      </div>
+    </section id="wave">
+    <section>
+      <div class="container-fluid ps-0 pe-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#88fff7" fill-opacity="1" d="M0,128L24,112C48,96,96,64,144,90.7C192,117,240,203,288,240C336,277,384,267,432,224C480,181,528,107,576,80C624,53,672,75,720,117.3C768,160,816,224,864,218.7C912,213,960,139,1008,122.7C1056,107,1104,149,1152,160C1200,171,1248,149,1296,122.7C1344,96,1392,64,1416,48L1440,32L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
+      </div>
+    </section>
+
+    <section id="fitur">
+      <div class="container">
+        <h1>Fitur</h1>
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5"> <!-- class= col mengatur responsive browser -->
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur1.jpg" alt="Fitur Printer Dapur">
+            <h4>Printer Dapur</h4> <!-- img-thumbnail = menambahkan border tipis di pinggir gambar -->
+            Mencetak pesanan pelanggan langsung di dapur, sehingga operasional lebih cepat dan efisien.
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5"> <!-- ps = padding kiri, pe = padding kanan, mb = margin bottom -->
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur2.jpg" alt="Fitur Harga Bertingkat">
+            <h4>Harga Bertingkat</h4>
+            Satu produk bisa memiliki beberapa harga yang berbeda bergantung dari jenis transaksi.
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5">
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur3.jpg" alt="Fitur Promo Diskon">
+            <h4>Promo Diskon</h4>
+            Tarik lebih banyak pelanggan baru dengan promo-promo diskon menarik, seperti diskon food only, atau buy 1 get 1.
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5">
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur4.jpg" alt="Fitur Transaksi Dine-In">
+            <h4>Transaksi Dine-In</h4>
+            Mencatat transaksi berdasarkan nomor meja, sehingga informasi lebih gampang untuk diakses kembali
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5">
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur5.jpg" alt="Fitur Laporan">
+            <h4>Laporan Lengkap</h4>
+            Data transaksi dikirim ke Cloud, sehingga pemilik bisnis dapat mengakses laporan lengkap kapan saja dan dari mana saja.
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 text-center ps-5 pe-5 mb-5">
+            <img class="img-thumbnail rounded-circle img-fitur" src="gambar/fitur6.jpg" alt="Fitur E-Menu">
+            <h4>Fitur E-Menu</h4>
+            Sudah dilengkapi dengan QR-Code yang dapat digunakan pelanggan untuk mengakses menu daei smartphone masing-masing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="testimoni pt-5 pb-5">
+      <div class="container">
+        <h1 class="mb-5">Testimoni</h1>
+        <div id="carousel-testimoni" class="carousel slide" data-bs-ride="carousel" > <!-- data-bs-interval untuk mengatur waktu menampilkan testimoni, 1000 = 1 detik -->
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active"> <!--carousel-item active membuat content ini akan ditampilkan pertama kali ketika browser dibuka -->
+              <h3 class="mb-4">Sejak kami menggunakan Laris Pos, operasional restoran menjadi leboih mudah dan lancar. </h3>
+              <img class="rounded-circle img-testimoni" src="gambar/testi1.jpg"> <em class="ms-3">David, Tanggerang</em>
+            </div>
+            <div class="carousel-item">
+              <h3 class="mb-4">Support yang luar biasa, Developer selalu tanggap menjawab email dan WA.</h3>
+              <img class="rounded-circle img-testimoni" src="gambar/testi2.jpg"> <em class="ms-3">Dewi, Jakarta</em>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-testimoni" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel-testimoni" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="harga" class="pt-5 pb-5">
+      <div class="container">
+        <h1 class="text-center">Harga Laris Pos</h1>
+        <div class="text-center">
+          Dimulai dari harga bulanan yang rendah, sehingga Anda dapat memulai dengan biaya investasi awal yang tejangkau.
+        </div>
+
+        <div class="row justify-content-evenly mt-5"> <!-- justify-content-evenly membuat kedua card berada di tengah layar -->
+          <div class="col-md-5 col-xl-3">
+            <div class="card mb-5">
+              <div class="card-header">
+                <h5 class="card-title">Paket Gold</h5>
+              </div>
+              <div class="card-body text-center">
+                <p class="card-text fs-4"><strong>Rp. 100.000</strong>/Bulan</p> <!-- p digunakan untuk membuat jarak ke content di bawahnya -->
+                <div class="card-text">Untuk 1 cabang</div>
+                <div class="card-text">Support via telepon dan email</div>
+                <div class="card-text">Maksimal 3 perangkat</div>
+                <div class="card-text">Cetak "Powered by Laris Pos" di footer nota</div>
+
+                <a href="#" class="btn btn-outline-primary mt-4 mb-4">
+                  <i class="bi bi-bucket-fill"></i>
+                  Beli Sekarang
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-xl-3">
+            <div class="card mb-5">
+              <div class="card-header bg-primary text-light">
+                <h5 class="card-title">Paket Platinum</h5>
+              </div>
+              <div class="card-body text-center">
+                <p class="card-text fs-4"><strong>Rp. 150.000</strong>/Bulan</p> <!-- p digunakan untuk membuat jarak ke content di bawahnya -->
+                <div class="card-text">Untuk 1 cabang</div>
+                <div class="card-text">Support via telepon dan email</div>
+                <div class="card-text">Maksimal 5 perangkat</div>
+                <div class="card-text">Cetak "Powered by Laris Pos" di footer nota</div>
+
+                <a href="#" class="btn btn-primary mt-4 mb-4">
+                  <i class="bi bi-bucket-fill"></i>
+                  Beli Sekarang
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="text-center pb-3">Perbandingan Paket</h1>
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-xl-8"> <!-- untuk mengatur lebar table -->
+            <div class="row bg-primary text-light border-bottom border-2 border-info pt-2 pb-2">
+              <div class="col-8">
+              </div>
+              <div class="col-2 fs-6">
+                <strong>Gold</strong>
+              </div>
+              <div class="col-2 fs-6">
+                <strong>Platinum</strong>
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Jumlah Cabang</strong>
+              </div>
+              <div class="col-2 fs-6">
+                1
+              </div>
+              <div class="col-2 fs-6">
+                1
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Jumlah Maksimal Perangkat</strong>
+              </div>
+              <div class="col-2 fs-6">
+                3
+              </div>
+              <div class="col-2 fs-6">
+                5
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Supoort Via Telepon & Email</strong>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi check-lg"></i>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Training Gratis di Kantor Laris Pos</strong>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Promo Member Get Member</strong>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+            </div>
+            <div class="row border-bottom border-1 pt-2 pb-2 paket-row">
+              <div class="col-8">
+                <strong>Cetak "Powered by Laris Pos" di footer nota</strong>
+              </div>
+              <div class="col-2 fs-6 text-success">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div class="col-2 fs-6 text-success">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="card-group"> <! membaut kedua paket disusun ke samping / berdampingan --></div> -->
+
+      </div>
+    </section>
+
+    <section id="kontak" class="kontak pt-5 pb-5">
+      <div class="container">
+        <h1 class="mb-4">Hubungi Kami</h1>
+
+        <div class="row">
+          <div class="col-md-10 col-xl-8">
+            <form>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input id="nama" class="form-control" placeholder="Nama Anda">
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" class="form-control" placeholder="Email Anda" type="email">
+              </div>
+
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="4"></textarea> <!-- rows= 4 artinya tingginya 4 baris -->
+              </div>
+
+              <div class="mb-3">
+                <div class="form-label">
+                  Departemen Tujuan
+                </div>
+
+                <div class="form-check form-check-inline"> <!-- form-check-inline membuat kedua opsi tersusun bejejer ke samping -->
+                  <input class="form-check-input" type="radio" name="tujuan" id="marketing" checked> <!-- checked membuat opsi marketing secara default terpillih -->
+                  <label class="form-check-label" for="marketing">Marketing</label> <!-- for merupakan id dari tag input -->
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tujuan" id="support">
+                  <label class="form-check-label" for="support">Support</label> <!-- for merupakan id dari tag input -->
+                </div>
+              </div>
+
+              <button class="btn btn-primary form-control">Hubungi Kami</button> <!-- membuat button hubungi kami -->
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wavefooter" class="kontak">
+      <div class="container-fluid ps-0 pe-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7DEDFF" fill-opacity="1" d="M0,128L24,122.7C48,117,96,107,144,85.3C192,64,240,32,288,32C336,32,384,64,432,80C480,96,528,96,576,117.3C624,139,672,181,720,181.3C768,181,816,139,864,128C912,117,960,139,1008,160C1056,181,1104,203,1152,176C1200,149,1248,75,1296,69.3C1344,64,1392,128,1416,160L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container pt-5 pb-5">
+        Copyright 2024 - All Right Reserved
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
